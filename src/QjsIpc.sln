@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QjsIpc", "QjsIpc\QjsIpc.csproj", "{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QjsIpc.Tests", "QjsIpc.Tests\QjsIpc.Tests.csproj", "{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
