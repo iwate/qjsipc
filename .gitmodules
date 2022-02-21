@@ -1,0 +1,3 @@
+[submodule "lib/wasi-lab"]
+	path = lib/wasi-lab
+	url = https://github.com/iwate/wasi-lab.git
