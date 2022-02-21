@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="./qjs.wasm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="CopyWasmFile" AfterTargets="BeforeBuild">
+    <Copy SourceFiles="../../lib/wasi-lab/qjs-wasi/build/qjs.wasm" DestinationFiles="qjs.wasm" SkipUnchangedFiles="true" />
+  </Target>
 </Project>
