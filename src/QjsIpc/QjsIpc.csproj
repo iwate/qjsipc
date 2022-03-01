@@ -7,9 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="QjsIpc.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="./qjs.wasm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Wasmtime" Version="0.34.0-preview1" />
   </ItemGroup>
 
   <Target Name="CopyWasmFile" AfterTargets="BeforeBuild">
