@@ -43,15 +43,11 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Prepare artifact directory
-        shell: bash
-        run: mkdir ./lib/wasi-lab/qjs-wasi/build
-
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
           name: wasm
-          path: ./lib/wasi-lab/qjs-wasi/build/qjs.wasm
+          path: ./lib/wasi-lab/qjs-wasi/build
 
       - name: Setup dotnet
         uses: actions/setup-dotnet@v1
