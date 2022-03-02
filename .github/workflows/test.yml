@@ -45,7 +45,6 @@ jobs:
 
       - name: Prepare artifact directory
         shell: bash
-        working-directory: ./lib/
         run: mkdir ./lib/wasi-lab/qjs-wasi/build
 
       - name: Download artifact
