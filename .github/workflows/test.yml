@@ -7,6 +7,12 @@ on:
       - 'src/**'
       - 'lib/**'
       - '.github/workflows/test.yml'
+  pull_request:
+    types: [assigned, opened, synchronize, reopened]
+    paths:
+      - 'src/**'
+      - 'lib/**'
+      - '.github/workflows/test.yml'
 
 jobs:
   build_wasm:
@@ -35,7 +41,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         dotnet: [6.0.x]
     steps:
       - name: Checkout
