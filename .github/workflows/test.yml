@@ -20,7 +20,7 @@ jobs:
     - name: Docker Setup Buildx
       uses: docker/setup-buildx-action@v1.6.0
 
-    - name: Build and push
+    - name: Build 
       working-directory: ./lib/
       run: docker run -v `pwd`:/src ubuntu:focal-20220113 /bin/bash /src/build-lib.sh
 
