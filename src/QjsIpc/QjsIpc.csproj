@@ -6,6 +6,27 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <AssemblyName>QjsIpc</AssemblyName>
+    <Version>$(Version)</Version>
+    <Authors>iwate</Authors>
+    <Owners>iwate</Owners>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <RepositoryUrl>https://github.com/iwate/qjsipc</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PackageReleaseNotes>https://github.com/iwate/qjsipc/releases</PackageReleaseNotes>
+    <Summary>A dotnet lib for internal procedure call to QuickJS wasm runtime.</Summary>
+    <PackageTags>webassembly, .net, js, javascript</PackageTags>
+    <Title>QjsIpc</Title>
+    <PackageDescription>
+QjsIpc enables .NET code to executing JavaScript on QuickJs and to interact with them in-process.
+QuickJS: https://bellard.org/quickjs/quickjs.html
+    </PackageDescription>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
   <ItemGroup>
     <InternalsVisibleTo Include="QjsIpc.Tests" />
   </ItemGroup>
