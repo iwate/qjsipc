@@ -20,48 +20,23 @@ jobs:
       working-directory: ./lib/
       run: docker run -v `pwd`:/src ubuntu:focal-20220113 /bin/bash /src/build-lib.sh
     
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v1
       with:
-        name: wasm
-        path: ./lib/wasi-lab/qjs-wasi/build/qjs.wasm
-    
-  build_dotnet:
-      needs: build_wasm
-      runs-on: ${{ matrix.os }}
-      strategy:
-        matrix:
-          os: [ubuntu-latest, windows-latest, macos-latest]
-          dotnet: [6.0.x]
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-          with:
-            submodules: 'recursive'
+        dotnet-version: 6.0.x
 
-        - name: Download artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: wasm
-            path: ./lib/wasi-lab/qjs-wasi/build
+    - name: Build projects
+      working-directory: ./src/
+      run: dotnet build
 
-        - name: Setup dotnet
-          uses: actions/setup-dotnet@v1
-          with:
-            dotnet-version: ${{ matrix.dotnet }}
+    - name: Run unit tests
+      working-directory: ./src/
+      run: dotnet test
 
-        - name: Build projects
-          working-directory: ./src/
-          run: dotnet build
+    - name: Pack package
+      working-directory: ./src/QjsIpc
+      run: dotnet pack -c Release /p:Version=${{github.event.release.tag_name}} 
 
-        - name: Run unit tests
-          working-directory: ./src/
-          run: dotnet test
-
-        - name: Pack package
-          working-directory: ./src/QjsIpc
-          run: dotnet pack -c Release /p:Version=${{github.event.release.tag_name}} 
-
-        # - name: Publish package to NuGet.org
-        #   working-directory: ./src/QjsIpc/bin/Release/
-        #   run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_TOKEN }}
+    - name: Publish package to NuGet.org
+      working-directory: ./src/QjsIpc/bin/Release/
+      run: dotnet nuget push *.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_TOKEN }}
