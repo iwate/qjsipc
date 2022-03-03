@@ -13,7 +13,7 @@ public class IpcTests
     [TestMethod]
     public async Task EchoTest()
     {
-        await using var qjs = new QjsIpc();
+        await using var qjs = new QjsIpcEngine();
 
         qjs.Start(new QjsIpcOptions
         {
@@ -30,7 +30,7 @@ public class IpcTests
     [TestMethod]
     public async Task TransformTest()
     {
-        await using var qjs = new QjsIpc();
+        await using var qjs = new QjsIpcEngine();
 
         qjs.Start(new QjsIpcOptions
         {

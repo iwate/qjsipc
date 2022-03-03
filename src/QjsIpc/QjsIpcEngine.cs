@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 using Wasmtime;
 using Module = Wasmtime.Module;
 namespace QjsIpc;
-public class QjsIpc : IAsyncDisposable
+public class QjsIpcEngine : IAsyncDisposable
 {
     private const string CMD_QUIT = ".quit";
     private ConcurrentWritableBuffer _dotnetBuffer;
@@ -13,7 +13,7 @@ public class QjsIpc : IAsyncDisposable
     private ConcurrentQueue<JObject> _invokes;
     private HostMethodRegistry? _methods;
 
-    public QjsIpc()
+    public QjsIpcEngine()
     {
         _dotnetBuffer = new ConcurrentWritableBuffer();
         _results = new ConcurrentDictionary<string, JObject>();
