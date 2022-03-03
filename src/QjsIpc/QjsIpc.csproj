@@ -32,7 +32,7 @@ QuickJS: https://bellard.org/quickjs/quickjs.html
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="./qjs.wasm"/>
+    <EmbeddedResource Include="qjs.wasm"/>
   </ItemGroup>
 
   <ItemGroup>
