@@ -112,7 +112,7 @@ public class QjsIpcEngine : IAsyncDisposable
     private void RunWasm(QjsIpcOptions options) 
     {
         using var engine = new Engine();
-        using var module = Module.FromFile(engine, Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "qjs.wasm"));
+        using var module = Module.FromStream(engine, "qjs", GetType().Assembly.GetManifestResourceStream("QjsIpc.qjs.wasm")!);
         using var linker = new Linker(engine);
         using var store = new Store(engine);
         using var wasmBuffer = new MemoryStream();
