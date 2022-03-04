@@ -1,19 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32104.313
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QjsIpc", "QjsIpc\QjsIpc.csproj", "{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QjsIpc", "QjsIpc\QjsIpc.csproj", "{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QjsIpc.Tests", "QjsIpc.Tests\QjsIpc.Tests.csproj", "{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QjsIpc.Tests", "QjsIpc.Tests\QjsIpc.Tests.csproj", "{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple", "..\examples\Simple\Simple.csproj", "{90554B82-0874-4974-AEC2-0375F3431EDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejs", "..\examples\Ejs\Ejs.csproj", "{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D0EF41EA-78CC-4F70-BCF7-54BB3522E286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +27,23 @@ Global
 		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD7F3014-8BA3-469E-9328-CA42EE3CAD25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90554B82-0874-4974-AEC2-0375F3431EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90554B82-0874-4974-AEC2-0375F3431EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90554B82-0874-4974-AEC2-0375F3431EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90554B82-0874-4974-AEC2-0375F3431EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90554B82-0874-4974-AEC2-0375F3431EDA} = {C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}
+		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC} = {C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF89D836-CC37-47B2-B1DA-D01C9D61951B}
 	EndGlobalSection
 EndGlobal
