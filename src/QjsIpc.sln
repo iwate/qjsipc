@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple", "..\examples\Simpl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejs", "..\examples\Ejs\Ejs.csproj", "{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMethod", "..\examples\HostMethod\HostMethod.csproj", "{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{90554B82-0874-4974-AEC2-0375F3431EDA} = {C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}
 		{5D3B43C0-4A5E-47F5-85E1-04A0F24804BC} = {C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}
+		{E3F5DD19-D6AE-4673-96DD-A8F4B6EE70D6} = {C7E098FA-7B9B-49A5-AAC6-7DB9E68E7FC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF89D836-CC37-47B2-B1DA-D01C9D61951B}
