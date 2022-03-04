@@ -38,7 +38,7 @@ public class OptionTests
         new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll"
+            ScriptFileName = "main.js"
         }.Validate();
     }
 
@@ -48,7 +48,7 @@ public class OptionTests
         Assert.ThrowsException<ArgumentException>(() => new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdInFilePath = "/the/illegal/path"
         }.Validate());
     }
@@ -59,7 +59,7 @@ public class OptionTests
         Assert.ThrowsException<ArgumentException>(() => new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdOutFilePath = "/the/illegal/path"
         }.Validate());
     }
@@ -70,7 +70,7 @@ public class OptionTests
         Assert.ThrowsException<ArgumentException>(() => new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdErrFilePath = "/the/illegal/path"
         }.Validate());
     }
@@ -81,7 +81,7 @@ public class OptionTests
         new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdInFilePath = "./stdin.txt"
         }.Validate();
     }
@@ -92,7 +92,7 @@ public class OptionTests
         new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdOutFilePath = "./stdout.txt"
         }.Validate();
     }
@@ -103,7 +103,7 @@ public class OptionTests
         new QjsIpcOptions
         {
             AllowedDirectoryPath = AppDomain.CurrentDomain.BaseDirectory,
-            ScriptFileName = "QjsIpc.dll",
+            ScriptFileName = "main.js",
             StdErrFilePath = "./stderr.txt"
         }.Validate();
     }
