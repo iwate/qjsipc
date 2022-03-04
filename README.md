@@ -49,7 +49,7 @@ Register a JavaScript procedure.
 `invoke: (name: string, ...params: any[]) => Promise<any>`  
 Invoke a .NET host procedure.
 
-`listen: () => void`
+`listen: () => void`  
 Start communication to .NET host.
 
 
