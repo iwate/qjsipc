@@ -30,7 +30,7 @@ public class QjsIpcEngine : IAsyncDisposable
 
         var source = new CancellationTokenSource();
 
-        _task = Task.WhenAny(
+        _task = Task.WhenAll(
             Task.Run(() =>
             {
                 RunWasm(options);
@@ -81,7 +81,7 @@ public class QjsIpcEngine : IAsyncDisposable
     {
         _dotnetBuffer.WriteLine(CMD_QUIT);
         if (_task != null)
-            await _task;
+            await _task.ConfigureAwait(false);
         await _dotnetBuffer.DisposeAsync();
     }
     private WasiConfiguration CreateConfig(QjsIpcOptions options)
