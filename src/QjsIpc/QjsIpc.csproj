@@ -24,7 +24,7 @@
 QjsIpc enables .NET code to executing JavaScript on QuickJs and to interact with them in-process.
 QuickJS: https://bellard.org/quickjs/quickjs.html
     </PackageDescription>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache License 2.0</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
