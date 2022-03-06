@@ -42,7 +42,7 @@ Console.WriteLine(message);
 `ipc` module has three public methods.
 
 
-`register: (name: string) => (...params: any[]) => Promise<any> | any`  
+`register: (name: string, procedure: (...params: any[]) => Promise<any> | any) => void`  
 Register a JavaScript procedure.
 
 
