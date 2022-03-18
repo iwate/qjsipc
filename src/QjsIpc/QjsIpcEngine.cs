@@ -61,12 +61,13 @@ public class QjsIpcEngine : IAsyncDisposable
                 if (_results.TryRemove(id, out var jobj))
                 {
                     var error = jobj["error"];
-                    if (error != null) 
+                    if (error != null)
+                    {
                         throw new IpcException(
                             ((int?)error["code"]) ?? -1, 
                             ((string?)error["message"]) ?? "Unknown", 
-                            error["data"]?.ToObject<Dictionary<string, object>>());
-                    
+                             error["data"]);
+                    }
                     var result = jobj["result"];
                     if (result != null)
                         return result.ToObject<TResult>();
