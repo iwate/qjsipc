@@ -24,6 +24,8 @@ public class QjsIpcEngine : IAsyncDisposable
     {
         if (_task != null)
             throw new InvalidOperationException("This instance is aleary running.");
+        
+        options.Validate();
 
         if (options.MethodsHost != null)
             _methods = HostMethodRegistry.Create(options.MethodsHost);
@@ -87,8 +89,6 @@ public class QjsIpcEngine : IAsyncDisposable
     }
     private WasiConfiguration CreateConfig(QjsIpcOptions options)
     {
-        options.Validate();
-
         var config = new WasiConfiguration();
 
         config = config.WithPreopenedDirectory(options.AllowedDirectoryPath!, ".");
